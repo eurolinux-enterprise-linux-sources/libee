@@ -1,10 +1,10 @@
 Summary: Event expression library inspired by CEE
 Name: libee
 Version: 0.4.1
-Release: 4%{?dist}
+Release: 6%{?dist}
 
-License: LGPLv2+ and MIT and GPL+
-Group: System Environment/Libraries
+License: LGPLv2+ and MIT and GPL+ 
+Group: System Environment/Libraries 
 URL: http://www.libee.org
 Source0: http://www.libee.org/files/download/%{name}-%{version}.tar.gz
 
@@ -13,7 +13,7 @@ BuildRequires: chrpath
 
 %description
 The core idea of libee is to provide a small but hopefully convenient API layer
-above the CEE standard. CEE is under heavy development and even some of its
+above the CEE standard. CEE is under heavy development and even some of its 
 core data structures have not been fully specified.
 
 CEE is an upcoming standard used to describe network events in a number of
@@ -27,7 +27,7 @@ Requires:   %{name}%{?_isa} = %{version}-%{release}
 Requires: libestr-devel%{?_isa}
 
 %package utils
-Summary: Optional utilities like libee-convert
+Summary:   Optional utilities like libee-convert 
 Requires:   %{name}%{?_isa} = %{version}-%{release}
 
 %description devel
@@ -41,7 +41,7 @@ The libee-convert utility provided by event expression library.
 %setup -q  -n %{name}-%{version}
 
 %build
-%configure
+%configure 
 V=1 make
 
 %install
@@ -72,14 +72,21 @@ make check
 %{_sbindir}/*
 
 %changelog
-* Mon Dec 03 2012 Tomas Heinrich <theinric@redhat.com> 0.4.1-4
-- remove trailing whitespace
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 0.4.1-6
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.4.1-5
+- Mass rebuild 2013-12-27
+
+* Thu Feb 14 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.4.1-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
 
 * Thu Sep 20 2012 Mahaveer Darade <mdarade@redhat.com> - 0.4.1-3
 - Added check to enable testsuite in tests dir
 
 * Mon Aug 27 2012 mdarade <mdarade@redhat.com> - 0.4.1-2
 - Added separate util package to have libee-convert utility
+
 
 * Tue Aug 7 2012 Mahaveer Darade <mdarade@redhat.com> 0.4.1-1
 - Initial port
